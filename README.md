@@ -13,3 +13,5 @@
 6. step-project-instagram - https://instagram-step.herokuapp.com/
 
 7. step-project-tinder - https://super-tinder.herokuapp.com/
+
+8. step-project-flight-board (console app)
