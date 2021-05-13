@@ -1,0 +1,132 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+/*-----------------------------------------------*/
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #061f80;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.difficulty-lvl-block {
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: column;
+    min-width: 40vw;
+    background-color: lightskyblue;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.field-size-block {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    background-color: lightblue;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.game-btn, .restart-game-btn {
+    width: 200px;
+    height: 70px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 55px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5s;
+    text-align: center;
+    margin: 0 10px;
+    color: white;
+    background-color: #14b9d5;
+    outline: none;
+    border: none;
+}
+
+.game-btn:hover {
+    background-color: #078cd1;
+}
+.game-btn:active, .restart-game-btn:active {
+    transform: scale(1.02);
+}
+
+.restart-game-btn {
+    background-color: #e9a78b;
+}
+
+.restart-game-btn:hover {
+    background-color: #e1845d;
+}
+
+/*-----------------------------------------------*/
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.table {
+    position: relative;
+    border-collapse: collapse;
+}
+
+.table-cell {
+    border: 2px solid #0e0e79;
+    cursor: pointer;
+}
+
+.game-score {
+    margin: 15px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.finalMessage {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 250px;
+    font-size: 30px;
+    line-height: 40px;
+    border: 5px solid rgba(0,0,0,0.4);
+    background: lightgray;
+    font-weight: bold;
+}
+
+.green {
+    color: #078d07;
+}
+
+.red {
+    color: darkred;
+}
+
+
+
+

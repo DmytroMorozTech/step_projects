@@ -1,0 +1,187 @@
+// Testimonials section
+// Responsible: Serhii Romaniuk
+//----------------------------
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/testimonials/testmonials-bg.png');
+  background-color: $color-testimonials-bg;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: 14px;
+  min-width: 320px;
+  padding: 61px 25px 0 25px;
+
+  @media (min-width: 481px) {
+    background-position-y: unset;
+    padding: 80px 20px 0 20px;
+    height: 100%;
+  }
+
+  @media (min-width: 635px) {
+    padding: 80px 20px 0 20px;
+    height: 100%;
+  }
+
+  @media (min-width: 993px) {
+    padding: 98px 20px 0 20px;
+    height: 100%;
+  }
+
+  @media (min-width: 1200px){
+    padding-left: $padding-width-of-container;
+    padding-right: $padding-width-of-container;
+  }
+
+  &__block-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: 481px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__header {
+    display: inline-block;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: bold;
+    padding-bottom: 30px;
+
+    @media (min-width: 481px) {
+      font-size: 40px;
+      line-height: 58px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 42px;
+      line-height: 62px;
+    }
+
+    @media (min-width: 993px) {
+      font-size: 45px;
+      line-height: 67px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 48px;
+      line-height: 72px;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+
+    @media (min-width: 481px) {
+      justify-content: flex-start;
+      width: 50%;
+      padding: 0 5%;
+    }
+
+    @media (min-width: 768px) {
+      min-height: 180px;
+    }
+
+    @media (min-width: 993px) {
+      width: calc(100% / 3);
+      padding: 0 3.2%;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__img-wrapper {
+    width: 225px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 481px) {
+      margin-bottom: 33px;
+    }
+
+    @media (min-width: 993px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__line {
+    width: 100%;
+    border: 1px solid #645766;
+    background-color: #645766;
+    margin: 22px auto 0 auto;
+
+    @media (min-width: 481px) {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 635px) {
+      width: 91vw;
+    }
+
+    @media (min-width: 993px) {
+      width: 79vw;
+    }
+
+    @media (min-width: 1200px) {
+      width: 60vw;
+      max-width: 780px;
+    }
+  }
+
+  &__additional-text {
+    text-align: center;
+    color: #918094;
+    display: none;
+
+    @media (min-width: 481px) {
+      display: block;
+      font-size: 12px;
+      line-height: 18px;
+      padding: 41px 0 16px 0;
+    }
+
+    @media (min-width: 635px) {
+      font-size: 14px;
+      margin: 0 auto;
+      width: 95%;
+      padding-top: 61px;
+    }
+
+    @media (min-width: 993px) {
+      padding-top: 6px;
+      width: 79vw;
+    }
+
+    @media (min-width: 1200px) {
+      margin: unset;
+      max-width: 1180px;
+
+    }
+  }
+}
+

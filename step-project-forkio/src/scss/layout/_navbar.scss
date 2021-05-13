@@ -1,0 +1,243 @@
+// Navbar section
+// Responsible: Serhii Romaniuk
+//----------------------------
+
+.navbar {
+  background-color: $color-navbar-bg;
+  position: relative;
+
+  &__header {
+    padding: 0 10px;
+    width: 100%;
+    height: 103px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__logo {
+    width: 43px;
+  }
+
+  &__logo-text {
+    display: none;
+    text-transform: uppercase;
+    font-size: 24px;
+
+    @media (min-width: 481px) {
+      display: block;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+  }
+
+  &__logo-link {
+    color: $header-text-color;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover, &:active {
+      color: $color-header-hover;
+      .navbar__logo path {
+        fill: $color-header-hover;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 119px;
+    height: 37px;
+    border-radius: 50px;
+    background-color: #8d81ac;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+
+    &:active {
+      color: #8d81ac;
+      background-color: $color-header-hover;
+    }
+
+    &:hover {
+      background-color: $color-header-hover;
+      color: #8d81ac;
+      border: 2px solid #8d81ac;
+    }
+
+    @media (min-width: 768px) {
+      width: 145px;
+      height: 38px;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 2s ease-out;
+    opacity:0;
+    pointer-events: none;
+
+    @media (min-width: 481px) {
+      pointer-events: all;
+      opacity: 1;
+      position: relative;
+      width: 100%;
+      height: 20px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 993px) {
+      width: 50%;
+      position: absolute;
+      bottom: 40px;
+      left: calc(50% + 80px);
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 540px;
+      position: absolute;
+      bottom: 40px;
+      left: calc(50% + 145px);
+    }
+  }
+
+  &__menu.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &__menu-item {
+    width: 290px;
+    height: 87px;
+    background-color: #333333;
+    border-bottom: 2px solid #3b3b3b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 2s ease-out;
+
+    @media (min-width: 481px) {
+      height: auto;
+      width: initial;
+      background-color: transparent;
+      border-bottom: unset;
+      display: inline-block;
+      padding: 0 15px;
+    }
+
+    @media (min-width: 635px) {
+      padding: 0 25px;
+    }
+
+    @media (min-width: 993px) {
+      padding: 0 12px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 0 16px;
+    }
+  }
+
+  &__menu-item:last-child {
+    height: 10px;
+    border-bottom: none;
+  }
+
+  &__menu-text {
+    height: 54px;
+    border-left: 8px solid #333333;
+    font-size: 26px;
+    padding-left: 30px;
+
+    &:hover {
+      border-left: 8px solid #8d81ac;
+    }
+
+    @media (min-width: 481px) {
+      height: unset;
+      border-left: unset;
+      font-size: 15px;
+      display: inline-block;
+      padding-left: unset;
+
+      &:hover {
+        border-left: unset;
+      }
+    }
+
+    @media (min-width: 635px) {
+      font-size: 16px;
+    }
+  }
+
+  &__menu-link {
+    width: 100%;
+    line-height: 87px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: #8d81ac;
+    }
+
+    &:active {
+      color: #fff;
+    }
+
+    @media (min-width: 481px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      line-height: unset;
+      color: $header-text-color;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-header-hover;
+      }
+
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+
+  @media (min-width: 481px) {
+    height: 118px;
+
+    &__header {
+      height: 80px;
+      padding: 0 20px;
+    }
+
+    &__menu-item:last-child {
+      display: none;
+    }
+  }
+
+  @media (min-width: 993px) {
+    padding-left: $padding-width-of-container-navbar;
+    padding-right: $padding-width-of-container-navbar;
+    height: 100px;
+    padding-top: 10px;
+  }
+}

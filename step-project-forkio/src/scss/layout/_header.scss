@@ -1,0 +1,164 @@
+// Header section
+// Responsible: Serhii Romaniuk
+//----------------------------
+
+.header {
+  min-width: 320px;
+  background-color: #000;
+  height: 620px;
+
+  @media (min-width: 768px) {
+    height: 685px;
+  }
+
+  &__main {
+    background-image: url('../img/header/header_main_img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -130px;
+    width: 100%;
+    height: 620px;
+
+    @media (min-width: 768px) {
+      height: 685px;
+      background-position-y: -110px;
+    }
+
+    @media (min-width: 993px) {
+      padding-left: $padding-width-of-container-navbar;
+      padding-right: $padding-width-of-container-navbar;
+    }
+
+    &-heading {
+      font-size: 48px;
+      line-height: 72px;
+      color: #fff;
+      text-align: center;
+
+      @media (min-width: 480px) {
+        font-size: 60px;
+        line-height: 90px;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 72px;
+        line-height: 108px;
+      }
+
+      @media (min-width: 993px) {
+        font-size: 76px;
+        line-height: 110px;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 82px;
+        line-height: 120px;
+      }
+    }
+  }
+
+  &__description {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      height: 260px;
+    }
+  }
+
+  &__title-first {
+    width: 90vw;
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #8d81ac;
+    text-align: center;
+
+    @media (min-width: 480px) {
+      font-size: 21px;
+      line-height: 31px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    @media (min-width: 993px) {
+      font-size: 27px;
+      line-height: 40px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+
+  &__title-first--lowercase {
+
+    @media (min-width: 480px) {
+      text-transform: lowercase;
+    }
+  }
+
+  &__title-second {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-top: 15px;
+    color: #848e97;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: 993px) {
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__button-bottom {
+    width: 290px;
+    height: 45px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 auto;
+    transform: translateY(-50%);
+
+    &:link, &:visited {
+      background-color: #8d81ac;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: #8d81ac;
+      border: 1px solid #8d81ac;
+    }
+
+    @media (min-width: 480px) {
+      width: 340px;
+      height: 54px;
+    }
+
+    @media (min-width: 768px) {
+      width: 390px;
+      height: 62px;
+    }
+  }
+}

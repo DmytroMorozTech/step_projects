@@ -1,0 +1,174 @@
+// Features section
+// Responsible: Dmitriy Moroz
+//----------------------------
+// Это секция "Here is what you get".
+// Для более удобного обращения к ней, она была названа как в макете - features.
+//----------------------------
+
+.features {
+  position: relative;
+  padding: 36px 8% 38px 8%;
+
+  background-color: $color-features-bg;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  @media (min-width: 993px) {
+    flex-direction: row-reverse;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: $padding-width-of-container;
+    padding-right: $padding-width-of-container;
+    // за счет этих паддингов, вы выравниваем наш "виртуальный" контейнер шириной по центру страницы.
+    // более того. В эти паддинги заложены также по 10px отступы слева и справа (согласно ТЗ).
+    // формула прописана в variables: $padding-width-of-container: calc(((100vw - 1200px)/2) + 10px);
+  }
+
+  &__h2 {
+    font-size: 32px;
+    line-height: 38px;
+    color: $color-features-h2;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 34px;
+    @media (min-width: 480px) {
+      font-size: 35px;
+      line-height: 50px;
+    }
+    @media (min-width: 768px) {
+      font-size: 42px;
+      line-height: 62px;
+      margin-bottom: 45px;
+    }
+    @media (min-width: 993px) {
+      width: 50%;
+      text-align: left;
+      padding-left: 22px;
+      font-size: 38px;
+      line-height: 38px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 46px;
+      line-height: 46px;
+    }
+  }
+
+  &__items-container {
+    padding-bottom: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (min-width: 480px) {
+      padding-bottom: 470px;
+    }
+    @media (min-width: 768px) {
+      padding-bottom: 530px;
+    }
+    @media (min-width: 993px) {
+      width: 50%;
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(1) .features__icon {
+      transform: translateX(10px);
+    }
+
+    @media (min-width: 480px) {
+      flex-direction: row;
+      margin-bottom: 48px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    @media (min-width: 768px) {
+      margin-bottom: 33px;
+    }
+
+    &:last-child {
+      margin-bottom:0;
+    }
+  }
+
+  &__item-content {
+    width: 100%;
+    @media (min-width: 480px) {
+      width: calc(100% - 140px);
+      margin-left: 10px;
+    }
+  }
+
+  &__item-heading {
+    color: #323232;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 20px;
+    text-align: center;
+    @media (min-width: 480px) {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-text {
+    color: #848e97;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    @media (min-width: 480px) {
+      text-align: left;
+    }
+    @media (min-width: 993px) {
+      width: 85%;
+    }
+  }
+
+  &__icon-container {
+    width: 111px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon {
+    margin-bottom: 25px;
+    @media (min-width: 480px) {
+      margin-bottom: auto;
+    }
+  }
+
+  &__main-image{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    max-height: 400px;
+    @media (min-width: 480px) {
+      max-height: 460px;
+      left: 5%;
+    }
+    @media (min-width: 768px) {
+      max-height: 520px;
+      left: 5%;
+    }
+    @media (min-width: 993px) {
+      bottom: 18px;
+      left: 50%;
+      max-height: 78%;
+    }
+  }
+}

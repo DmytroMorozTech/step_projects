@@ -1,0 +1,135 @@
+body {
+    margin-top: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 100vw;*/
+}
+
+.gameBoard {
+    display: flex;
+    justify-content: center;
+    border: 5px solid #9d3105;
+}
+
+#button {
+    display: flex;
+    visibility: hidden;
+    width: 240px;
+    margin: 0 auto 30px auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-family: Calibri;
+    font-size: 22px;
+    background-color: #feea80;
+    height: 60px;
+    margin-top: 20px;
+    border-color: transparent;
+    transition: border-color 2500ms;
+}
+
+#button:link,
+#button:visited {
+    text-decoration: none;
+    color: #fa6b31;
+}
+
+#button:hover {
+    color: #9d3105;
+    font-weight: bold;
+    border: 4px solid #9d3105;
+}
+
+.info {
+    font-size: 25px;
+    font-family: "Calibri Light", sans-serif;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.cell {
+    font-family: "Calibri Light", sans-serif;
+    text-align: center;
+    font-size: 28px;
+    vertical-align: middle;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: orange;
+    transition: all 0.5s;
+}
+
+.cell:hover {
+    opacity: 0.6;
+}
+
+.cell.opened {
+    background: none;
+    cursor: unset;
+    box-shadow: none;
+}
+
+.cell.disactivated {
+    background-color: lightgray;
+    box-shadow: none;
+    transition: all 0.3s;
+    pointer-events: none;
+    cursor: unset;
+}
+
+.cell.flag::before {
+    content: '\1F6A9';
+    font-size: 28px;
+}
+
+.cell.mine::before {
+    content: '\1F4A3';
+/* с помощью псевдоэлемента задаем какой контент (значок бомбы) будет добавлен во внутрь html-элемента
+с классом .cell.mine */
+}
+
+/* В зависимости от количества заминированных соседей у ячейки будет разный контент и разный цвет этого контента*/
+.cell.num-1::before {
+    content: '1';
+    color: #14195b;
+}
+
+.cell.num-2::before {
+    content: '2';
+    color: #279e19;
+}
+
+.cell.num-3::before {
+    content: '3';
+    color: #d91b46;
+}
+
+.cell.num-4::before {
+    content: '4';
+    color: #65165f;
+}
+
+.cell.num-5::before {
+    content: '5';
+    color: black;
+}
+
+.cell.num-6::before {
+    content: '6';
+    color: black;
+}
+
+.cell.num-7::before {
+    content: '7';
+    color: black;
+}
+
+.cell.num-8::before {
+    content: '8';
+    color: black;
+}

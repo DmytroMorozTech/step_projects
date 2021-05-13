@@ -1,0 +1,49 @@
+
+
+//COLORS
+//---------------------------------
+$color-revolutionary-h2: #635c73;
+$color-revolutionary-btn-text: #333333;
+$color-btn-with-count-bg: #f8f9fb;
+$color-btn-with-count-bg--hover: #eff2f5;
+$color-btn-with-count-border: rgba(27,31,35,.2);
+$color-btn-with-count-border--hover: #999999;
+$color-btn-social-count--hover: #0366d6;
+
+$color-features-bg: #f4f4f4;
+$color-features-h2: #8d81ac;
+
+$color-navbar-bg: #27262a;
+$color-testimonials-bg: #4b3b4e;
+
+$color-header-bg: #010005;
+
+$color-white: #ffffff;
+
+//-------------------------------
+//Section Pricing
+$color-pricing-section-bg: #4b3b4e;
+
+$color-pricing-bg: #5f5161;
+$color-pricing-bg-selected: #413344;
+
+$color-pricing-header-bg: #695b6a;
+$color-pricing-header-bg-selected: #3a2d3d;
+
+$color-pricing-btn-bg: #776b79;
+$color-pricing-btn-bg-selected: #5d5260;
+
+$color-pricing-btn-bg-hover: #d2ccd2;
+$color-pricing-btn-font-hover: #7f6d78;
+
+//----------------------------------
+// WIDTHS
+$container-max-width: 1200px;
+$padding-width-of-container: calc(((100vw - 1200px)/2) + 10px);
+$padding-width-of-container-navbar: calc(((100vw - 1200px)/2) + 10px);
+// calc(((100vw - 1200px)/2) - этот паддинг формирует отцентрированный контейнер шириной 1200px.
+
+$color-navbar-bg: #27262a;
+$color-header-hover: #fff;
+$color-header-bg: #010005;
+$header-text-color: #8d81ac;

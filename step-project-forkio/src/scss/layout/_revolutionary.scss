@@ -1,0 +1,147 @@
+// Revolutionary section
+// Responsible: Dmitriy Moroz
+//----------------------------
+
+.revolutionary {
+  padding: 44px 5% 0 5%;
+  // 44px - отступ для кнопки из секции header.
+  // Без этого отступа центрирование контента внутри секции revolutionary будет некорректным.
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    padding: 60px 7% 0 7%;
+    height: 435px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: $padding-width-of-container;
+    padding-right: $padding-width-of-container;
+    height: 400px;
+  }
+
+  &__h2 {
+    color: $color-revolutionary-h2;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    @media (min-width: 480px) {
+      font-size: 34px;
+      line-height: 50px;
+    }
+    @media (min-width: 768px) {
+      font-size: 45px;
+      line-height: 60px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 54px;
+      line-height: 80px;
+    }
+  }
+
+  &__text {
+    opacity: 0.8;
+    color: #323232;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 34px;
+
+    @media (min-width: 480px) {
+      margin-top: 26px;
+      margin-bottom: 26px;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    @media (min-width: 768px) {
+      margin-top: 36px;
+      margin-bottom: 36px;
+      font-size: 21px;
+      line-height: 32px;
+      // при 1200px остаются все те же значения.
+    }
+  }
+
+  &__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    line-height: 24px;
+    width: 260px;
+    @media (min-width: 480px) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      height: 26px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 20px;
+
+      @media (min-width: 480px) {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & + .revolutionary__btn {
+        margin-left: 10px;
+      }
+
+      &-with-count {
+        display: flex;
+        align-items: center;
+        padding: 0 11px;
+        background-color: $color-btn-with-count-bg;
+        border: 1px solid $color-btn-with-count-border;
+        border-radius: 3px 0 0 3px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        &:link, &:visited {
+          color: $color-revolutionary-btn-text;
+        }
+
+        &:hover {
+          background-color: $color-btn-with-count-bg--hover;
+          border-color: $color-btn-with-count-border--hover;
+        }
+      }
+
+      &-icon {
+        margin-right: 3px;
+        width: 16px;
+      }
+
+      &-social-count {
+        display: flex;
+        align-items: center;
+        padding: 0 7px;
+        border: 1px solid rgba(27,31,35,.2);
+        border-left: none;
+        border-radius: 0 3px 3px 0;
+        text-decoration: none;
+        &:link, &:visited {
+          color: $color-revolutionary-btn-text;
+        }
+
+        &:hover {
+          color: $color-btn-social-count--hover;
+        }
+      }
+  }
+}

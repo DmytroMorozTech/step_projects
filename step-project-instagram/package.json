@@ -1,0 +1,27 @@
+{
+  "name": "step-project-instagram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "14.15.0"
+  },
+  "scripts": {
+    "start": "npm start --prefix /server",
+    "build": "npm install --prefix server && npm install --prefix front-end-instagram && npm run build --prefix front-end-instagram && rm -rf server/public/* && cp -a front-end-instagram/build/. server/public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Dmytro_Moroz/step-project-instagram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Dmytro_Moroz/step-project-instagram/issues"
+  },
+  "homepage": "https://gitlab.com/Dmytro_Moroz/step-project-instagram#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0"
+  }
+}

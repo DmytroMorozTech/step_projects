@@ -1,0 +1,495 @@
+/*
+1. Header section
+2. Pop-ups (modal windows)
+3. Filter (live search)
+4. Login form, create form, edit form
+5. Spinner animation
+6. Visit card
+*/
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin:0;
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Montserrat', "Arial", sans-serif;
+    color: black;
+    font-weight: 400;
+    line-height: 24px;
+    box-sizing: border-box;
+    margin:0;
+    background-color: #fffcfc;
+}
+
+/*-------------------------------------*/
+/* 1. Header section */
+.header {
+    display: flex;
+    max-width: 1200px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 170px;
+}
+
+.header__logo-link {
+    height: 50%;
+}
+
+.header__logo {
+    height: 100%;
+}
+
+.sign-in-btn, .login-btn,.create-visit-btn,
+.create-visit-modal-btn, .edit-visit-modal-btn, .add-btn {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-family: monospace;
+    box-shadow: 0 5px 7px #0057ab;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 4px solid #d9d9d9;
+    margin: 10px;
+    font-weight: bold;
+    color: #0057ab;
+}
+
+.sign-in-btn, .create-visit-btn {
+    display: none;
+}
+
+.sign-in-btn:hover, .login-btn:hover, .create-visit-btn:hover,
+.create-visit-modal-btn:hover, .edit-visit-modal-btn:hover, .add-btn:hover {
+    box-shadow: 0 15px 25px -5px #0057ab;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+.sign-in-btn:active, .login-btn:active,
+.create-visit-btn:active, .create-visit-modal-btn:active,
+.edit-visit-modal-btn:active, .add-btn:active {
+    box-shadow: 0 4px 8px #0065c8;
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+}
+
+.sign-in-btn-icon, .login-btn-icon, .add-btn-icon  {
+    height: 1.3rem;
+    padding: 0 10px;
+}
+
+.login-icon {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+}
+
+/*-------------------------------------*/
+/* 2. Pop-ups (modal windows)*/
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+    z-index:10;
+}
+
+.popup__area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+
+.activated {
+    opacity: 1;
+    visibility: visible;
+}
+
+.activated .popup__content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    position: relative;
+    background-color: #fff;
+    color: black;
+    padding:40px 50px 30px 50px;
+    opacity:0;
+    transform: translate(0px, -100%);
+    transition: all 0.8s ease 0s;
+}
+
+.popup__title{
+    font-size: 2rem;
+    margin: 0 0 1em 0;
+}
+
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.popup__close:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+/*-------------------------------------*/
+/* 3. Filter (live search)*/
+.filter {
+    display: flex;
+    max-width: 1200px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    /*border: 2px solid gray;*/
+    border-radius: 15px;
+    margin: 0 auto 70px auto;
+    box-shadow: 0 0 10px #000;
+    /*background-color: lightgoldenrodyellow;*/
+    height: 200px;
+}
+
+.filter.hide {
+    display: none;
+}
+
+.filter__live-search {
+    background-color: #d9d9d9;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 15px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.filter__urgency-title {
+    margin: 0 5px 0 40px;
+}
+
+.filter__select-urgency {
+    background-color: #d9d9d9;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+}
+
+.filter__no-cards {
+    text-align: center;
+    font-size: 24px;
+    margin: 50px auto;
+    color: #be146e;
+}
+
+/*-------------------------------------*/
+/* 4. Login form, create form, edit form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 30vw;
+    min-height: 30vw;
+}
+
+.input-label {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-size: 23px;
+    line-height: 35px;
+    margin-bottom: 15px;
+}
+
+.email-input, .password-input {
+    font-family: inherit;
+    height: 30px;
+    width: 70%;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.password-input{
+    font-size: 35px;
+}
+
+.one-line-input{
+    display: block;
+    font-family: inherit;
+    height: 30px;
+    width: 100%;
+    margin: 5px 0;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.field-name {
+    display: block;
+    height: 30px;
+    font-size: 14px;
+    color: #0057ab;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.textarea {
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    height: 80px;
+    margin: 4px 0;
+}
+
+.notification {
+    color: orangered;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px auto;
+    transition: all 1300ms;
+    text-align: center;
+}
+
+.create-visit-form, .edit-visit-form {
+    min-width: 30vw;
+    min-height: 30vw;
+}
+
+.doctor-select, .urgency-select {
+    font-weight: bold;
+    font-family: inherit;
+    height: 50px;
+    /*border: 2px solid #0a0e29;*/
+    background-color: lightgray;
+
+    width: 100%;
+    margin: 5px 0;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.extra-inputs {
+    border: 2px solid green;
+}
+
+.h2 {
+    color: #2d325a;
+    margin: 25px 0;
+    text-align: center;
+}
+
+/*-------------------------------------*/
+/* 5. Spinner animation */
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*-------------------------------------*/
+/* 6. Visit card */
+.visits {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px dashed gray;
+    margin: 0 auto;
+    min-height: 300px;
+    height: auto;
+}
+
+.no-visits-notice {
+    text-align: center;
+    font-size: 24px;
+    margin: 50px auto;
+    color: #be146e;
+}
+
+.visit-card {
+    position: relative;
+    width: 30%;
+    border: 2px solid #1e2144;
+    margin: 15px;
+    padding: 10px;
+    height: 200px;
+    transition: all 250ms ease-out;
+    border-radius: 10px;
+}
+
+.visit-id-container {
+    background-color: lightblue;
+    padding: 8px;
+    margin:10px 0;
+}
+
+.full-name-container {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.doctor {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.3rem;
+}
+
+.show-more-btn, .show-less-btn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #2494a2;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 140px;
+    transition: all 0.5s;
+    cursor: pointer;
+    outline: none;
+    margin-top: 15px;
+}
+
+.show-less-btn {
+    background-color: #389ba7;
+    position: absolute;
+    bottom:10px;
+}
+
+.show-more-btn span, .show-less-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.show-more-btn span:after, .show-less-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.show-more-btn:hover span, .show-less-btn:hover span {
+    padding-right: 15px;
+}
+
+.show-more-btn:hover span:after,
+.show-less-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.line-in-visit{
+    color: #616be6;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.regular-text {
+    font-weight: 400;
+}
+
+.edit-visit-icon, .remove-visit-icon  {
+    height: 3.5rem;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.edit-panel {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    display: flex;
+    margin: 10px 0;
+    justify-content: flex-end;
+}
+
+.minified-input {
+    display: inline-block;
+    width: auto;
+}
+
+.hidden {
+    display: none;
+}

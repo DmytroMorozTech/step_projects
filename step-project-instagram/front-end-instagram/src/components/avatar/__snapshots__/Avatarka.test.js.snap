@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatarka testing url component with avatar url 1`] = `
+<Avatarka
+  avatarUrl={
+    Object {
+      "avatarUrl": "instagram/avatars/user_6_avatar_jbtint",
+    }
+  }
+/>
+`;

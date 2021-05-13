@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing comments component comments props 1`] = `
+<Comments
+  allUsers={
+    Array [
+      Object {
+        "a": "1",
+      },
+      Object {
+        "b": "2",
+      },
+    ]
+  }
+  comment={
+    Object {
+      "a": "1",
+      "b": "2",
+    }
+  }
+/>
+`;

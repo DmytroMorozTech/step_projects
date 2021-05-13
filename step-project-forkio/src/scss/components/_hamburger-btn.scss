@@ -1,0 +1,45 @@
+.navbar {
+
+  &__btn {
+    background-color: $color-navbar-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+    @media (min-width: 481px) {
+      display: none;
+    }
+  }
+
+  &__btn-burger {
+    position: relative;
+    width: 26px;
+    height: 3px;
+    background-color: #e5e3e3;
+    border-radius: 5px;
+  }
+
+  &__btn-burger::before,
+  &__btn-burger::after {
+    width: 26px;
+    height: 3px;
+    background-color: $color-white;
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    transition: all 0.6s ease-in-out;
+  }
+
+  &__btn-burger::before {
+    width: 21px;
+    transform: translate(5px,-7px);
+  }
+
+  &__btn-burger::after {
+    transform: translateY(7px);
+  }
+}
